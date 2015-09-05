@@ -53,6 +53,13 @@ function randomColorFreeGray(time,slowly){
     var num = Math.floor((t / slowly) % size);
     return colors[keys[num]]
 }
+function randomColorFromNum(anynum){
+    var keys = getColorsKey(colors);
+    var size = countColors(colors)-1;
+    var num = Math.floor(Math.abs(anynum) % size);
+    return colors[keys[num]]
+}
+
 
 var colors = {};
 colors.darkblue = color16("103896");
